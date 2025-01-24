@@ -354,434 +354,615 @@ display: none;
 
 <div id="datos-siedu" class="section level2">
 <h2>Datos SIEDU</h2>
-<p>Limpieza de datos del Sistema de Indicadores y Estándares de
-Desarrollo Urbano (SIEDU).</p>
+<p>Limpieza de datos del <a href="https://www.ine.gob.cl/herramientas/portal-de-mapas/siedu">Sistema
+de Indicadores y Estándares de Desarrollo Urbano (SIEDU).</a></p>
 <p>Los datos de este sistema se entregan desde el sitio web del INE en
-un archivo Excel un poco engorroso, por lo que este repositorio carga
-este archivo, lo limpia, y lo entrega como una sola tabla en formato
-tidy (una observación por fila; es decir, cada fila representa solo a
-una variable de una sola comuna). El archivo limpio está en la carpeta
+un archivo Excel un poco engorroso, y la única forma de visualizarlos es
+con unos visores ArcGIS no muy buenos que digamos.</p>
+<p>Dado lo anterior, este repositorio carga el archivo de datos original
+del SIEDU (la matriz de indicadores), lo limpia, y lo entrega como una
+sola tabla en formato tidy (una observación por fila; es decir, cada
+fila representa solo a una variable de una sola comuna).</p>
+<p><strong>Producto:</strong> base de datos comunales de 83 indicadores
+de desarrollo urbano para 117 comunas de Chile. Disponible en la carpeta
 <code>datos_procesados</code>.</p>
+<p>La base de datos original se puede descargar desde el <a href="https://www.ine.gob.cl/herramientas/portal-de-mapas/siedu">sitio
+del INE</a>, en <a href="https://www.ine.gob.cl/docs/default-source/sistema-de-indicadores-y-estandares-de-desarrollo-urbano/indicadores/actualización-2019/matriz-siedu-publicacion.xlsm?sfvrsn=f50c5851_13">este
+enlace.</a></p>
 <div id="tabla-de-variables-disponibles" class="section level3">
 <h3>Tabla de variables disponibles:</h3>
-<table>
+<table style="width:100%;">
 <colgroup>
-<col width="97%" />
 <col width="2%" />
+<col width="68%" />
+<col width="26%" />
+<col width="1%" />
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left">Indicador de desarrollo urbano</th>
-<th align="right">año de medición</th>
+<th align="left">id</th>
+<th align="left">variable</th>
+<th align="left">medida</th>
+<th align="right">año</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
+<td align="left">BPU_8</td>
 <td align="left">Cantidad de jornadas diarias completas de trabajo de
 médicos, en salud primaria, por cada 10.000 habitantes</td>
+<td align="left">Jornadas diarias / 10.000 habs</td>
 <td align="right">2018</td>
 </tr>
 <tr class="even">
+<td align="left">BPU_17</td>
 <td align="left">Cantidad de luminarias cada 50 metros lineales de red
 vial</td>
+<td align="left">Relación (Número de luminarias / 50 m de red vial)</td>
 <td align="right">2019</td>
 </tr>
 <tr class="odd">
+<td align="left">EA_34</td>
 <td align="left">Cantidad de residuos eliminados con disposición final
 per cápita</td>
+<td align="left">kg/hab/día</td>
 <td align="right">2019</td>
 </tr>
 <tr class="even">
+<td align="left">EA_22a</td>
 <td align="left">Consumo de energía eléctrica per cápita no
 residencial</td>
+<td align="left">Kilovatio hora (kWh)/hab/año</td>
 <td align="right">2021</td>
 </tr>
 <tr class="odd">
+<td align="left">EA_22</td>
 <td align="left">Consumo de energía eléctrica per cápita
 residencial</td>
+<td align="left">Kilovatio hora (kWh)/hab/año</td>
 <td align="right">2021</td>
 </tr>
 <tr class="even">
+<td align="left">EA_33a</td>
 <td align="left">Densidad de hogares en campamentos</td>
+<td align="left">Densidad (Número hogares/ha)</td>
 <td align="right">2022</td>
 </tr>
 <tr class="odd">
+<td align="left">BPU_26</td>
 <td align="left">Densidad de oferta planificada de transporte público
 mayor en periodo punta mañana, por persona</td>
+<td align="left">Promedio per cápita de frecuencia de TP mayor</td>
 <td align="right">2018</td>
 </tr>
 <tr class="even">
+<td align="left">BPU_26b</td>
 <td align="left">Densidad de oferta planificada de transporte público
 menor en periodo punta mañana, por persona</td>
+<td align="left">Promedio per cápita de frecuencia de TP menor</td>
 <td align="right">2018</td>
 </tr>
 <tr class="odd">
+<td align="left">IS_5</td>
 <td align="left">Diferencia entre el valor de suelo más alto y el más
 bajo entre las áreas homogéneas urbanas definidas por el Servicio de
 Impuestos Internos</td>
+<td align="left">Índice</td>
 <td align="right">2018</td>
 </tr>
 <tr class="even">
+<td align="left">BPU_7</td>
 <td align="left">Distancia a centros de salud primaria</td>
+<td align="left">m</td>
 <td align="right">2020</td>
 </tr>
 <tr class="odd">
+<td align="left">BPU_3</td>
 <td align="left">Distancia a establecimientos de educación básica</td>
+<td align="left">m</td>
 <td align="right">2020</td>
 </tr>
 <tr class="even">
+<td align="left">BPU_1</td>
 <td align="left">Distancia a establecimientos de educación inicial</td>
+<td align="left">m</td>
 <td align="right">2020</td>
 </tr>
 <tr class="odd">
+<td align="left">BPU_25</td>
 <td align="left">Distancia a paraderos de transporte público mayor</td>
+<td align="left">m</td>
 <td align="right">2018</td>
 </tr>
 <tr class="even">
+<td align="left">BPU_22</td>
 <td align="left">Distancia a parques públicos</td>
+<td align="left">m</td>
 <td align="right">2019</td>
 </tr>
 <tr class="odd">
+<td align="left">BPU_20</td>
 <td align="left">Distancia a plazas públicas</td>
+<td align="left">m</td>
 <td align="right">2019</td>
 </tr>
 <tr class="even">
+<td align="left">BPU_13</td>
 <td align="left">Distancia a una unidad o destacamento destinado al
 servicio operativo de Carabineros</td>
+<td align="left">m</td>
 <td align="right">2018</td>
 </tr>
 <tr class="odd">
+<td align="left">IS_91</td>
 <td align="left">Indisponibilidad de suministro eléctrico - indicador
 SAIDI anual</td>
+<td align="left">Número de horas promedio / año</td>
 <td align="right">2022</td>
 </tr>
 <tr class="even">
+<td align="left">IG_91</td>
 <td align="left">Monto total per cápita, en pesos, de fondos entregados
 por el municipio a la comunidad vía proyectos concursables para el
 mejoramiento urbano</td>
+<td align="left">Relación (Monto per cápita en pesos / hab)</td>
 <td align="right">2019</td>
 </tr>
 <tr class="odd">
+<td align="left">EA_35</td>
 <td align="left">Número de microbasurales por cada 10.000
 habitantes</td>
+<td align="left">Relación (Número microbasurales / 10.000 habs)</td>
 <td align="right">2019</td>
 </tr>
 <tr class="even">
+<td align="left">DE_31</td>
 <td align="left">Número de víctimas lesionadas en siniestros de tránsito
 por cada 100.000 habitantes</td>
+<td align="left">Relación (Número víctimas lesionadas /100.000
+habs)</td>
 <td align="right">2021</td>
 </tr>
 <tr class="odd">
+<td align="left">DE_28</td>
 <td align="left">Número de víctimas mortales en siniestros de tránsito
 por cada 100.000 habitantes</td>
+<td align="left">Relación (Número víctimas mortales /100.000 habs)</td>
 <td align="right">2021</td>
 </tr>
 <tr class="even">
+<td align="left">DE_3</td>
 <td align="left">Participación del Fondo Común Municipal (FCM) en el
 ingreso municipal total (descontadas las transferencias)</td>
+<td align="left">Porcentaje</td>
 <td align="right">2022</td>
 </tr>
 <tr class="odd">
+<td align="left">DE_102</td>
 <td align="left">Partición modal del transporte público (número de
 viajes en transporte público respecto al número total de viajes)</td>
+<td align="left">Porcentaje</td>
 <td align="right">2019</td>
 </tr>
 <tr class="even">
+<td align="left">DE_105</td>
 <td align="left">Partición modal del transporte sustentable (suma de
 viajes en transporte público, caminata y bicicleta respecto al número
 total de viajes)</td>
+<td align="left">Porcentaje</td>
 <td align="right">2019</td>
 </tr>
 <tr class="odd">
+<td align="left">IS_201</td>
 <td align="left">Población estimada de migrantes internacionales por
 comuna</td>
+<td align="left">Porcentaje</td>
 <td align="right">2020</td>
 </tr>
 <tr class="even">
+<td align="left">EA_53</td>
 <td align="left">Porcentaje de la superficie cubierta por vegetación
 total</td>
+<td align="left">Porcentaje</td>
 <td align="right">2020</td>
 </tr>
 <tr class="odd">
+<td align="left">EA_23</td>
 <td align="left">Porcentaje de aporte de energía eléctrica proveniente
 de paneles solares domiciliarios</td>
+<td align="left">Porcentaje</td>
 <td align="right">2022</td>
 </tr>
 <tr class="even">
+<td align="left">EA_93</td>
 <td align="left">Porcentaje de cobertura de la red de ciclovía sobre la
 red vial</td>
+<td align="left">Porcentaje</td>
 <td align="right">2021</td>
 </tr>
 <tr class="odd">
+<td align="left">IP_6</td>
 <td align="left">Porcentaje de inversión pública destinada a proyectos
 que tienen procesos de intervención de restauración de inmuebles
 patrimoniales sobre el total de inversión destinada a proyectos con
 RF</td>
+<td align="left">Porcentaje</td>
 <td align="right">2018</td>
 </tr>
 <tr class="even">
+<td align="left">IG_1</td>
 <td align="left">Porcentaje de la inversión nacional a escala comunal en
 la que participa el municipio como institución contratante</td>
+<td align="left">Porcentaje</td>
 <td align="right">2019</td>
 </tr>
 <tr class="odd">
+<td align="left">IS_37</td>
 <td align="left">Porcentaje de la población en situación de pobreza
 multidimensional</td>
+<td align="left">Porcentaje</td>
 <td align="right">2019</td>
 </tr>
 <tr class="even">
+<td align="left">IS_36</td>
 <td align="left">Porcentaje de la población en situación de pobreza por
 ingresos</td>
+<td align="left">Porcentaje</td>
 <td align="right">2019</td>
 </tr>
 <tr class="odd">
+<td align="left">EA_53a</td>
 <td align="left">Porcentaje de la superficie cubierta por vegetación
 densa</td>
+<td align="left">Porcentaje</td>
 <td align="right">2020</td>
 </tr>
 <tr class="even">
+<td align="left">EA_33</td>
 <td align="left">Porcentaje de la superficie de campamentos respecto del
 área urbana</td>
+<td align="left">Porcentaje</td>
 <td align="right">2022</td>
 </tr>
 <tr class="odd">
+<td align="left">IS_40</td>
 <td align="left">Porcentaje de manzanas con veredas con buena calidad de
 pavimento</td>
+<td align="left">Porcentaje</td>
 <td align="right">2018</td>
 </tr>
 <tr class="even">
+<td align="left">IG_90</td>
 <td align="left">Porcentaje de participación en las elecciones
 municipales por comuna</td>
+<td align="left">Porcentaje</td>
 <td align="right">2022</td>
 </tr>
 <tr class="odd">
+<td align="left">BPU_28b</td>
 <td align="left">Porcentaje de población atendida por el sistema de
 parques públicos</td>
+<td align="left">Porcentaje</td>
 <td align="right">2019</td>
 </tr>
 <tr class="even">
+<td align="left">BPU_28a</td>
 <td align="left">Porcentaje de población atendida por el sistema de
 plazas públicas</td>
+<td align="left">Porcentaje</td>
 <td align="right">2019</td>
 </tr>
 <tr class="odd">
+<td align="left">EA_202</td>
 <td align="left">Porcentaje de población atendida por la red de
 ciclovías</td>
+<td align="left">Porcentaje</td>
 <td align="right">2018</td>
 </tr>
 <tr class="even">
+<td align="left">EA_36</td>
 <td align="left">Porcentaje de residuos municipales valorizados</td>
+<td align="left">Porcentaje</td>
 <td align="right">2019</td>
 </tr>
 <tr class="odd">
+<td align="left">DE_204</td>
 <td align="left">Porcentaje de viajes originados inferiores a 5
 kilómetros</td>
+<td align="left">Porcentaje</td>
 <td align="right">2021</td>
 </tr>
 <tr class="even">
+<td align="left">IS_34</td>
 <td align="left">Porcentaje de viviendas con situación de allegamiento
 externo</td>
+<td align="left">Porcentaje</td>
 <td align="right">2018</td>
 </tr>
 <tr class="odd">
+<td align="left">IS_33</td>
 <td align="left">Porcentaje de viviendas en situación de
 hacinamiento</td>
+<td align="left">Porcentaje</td>
 <td align="right">2018</td>
 </tr>
 <tr class="even">
+<td align="left">IS_31</td>
 <td align="left">Porcentaje de viviendas particulares que requieren
 mejoras de materialidad y/o servicios básicos</td>
+<td align="left">Porcentaje</td>
 <td align="right">2018</td>
 </tr>
 <tr class="odd">
+<td align="left">IG_200</td>
 <td align="left">Porcentaje de votantes de nacionalidad extranjera en
 las elecciones municipales</td>
+<td align="left">Porcentaje</td>
 <td align="right">2022</td>
 </tr>
 <tr class="even">
+<td align="left">DE_25</td>
 <td align="left">Promedio de intersecciones relevantes cada 1,44
 km²</td>
+<td align="left">Número de intersecciones promedio.</td>
 <td align="right">2019</td>
 </tr>
 <tr class="odd">
+<td align="left">DE_200</td>
 <td align="left">Proporción de viajes con una duración mayor o igual a
 45 minutos</td>
+<td align="left">Porcentaje</td>
 <td align="right">2019</td>
 </tr>
 <tr class="even">
+<td align="left">DE_201</td>
 <td align="left">Proporción de viajes de estudio y trabajo con una
 duración mayor o igual a 45 minutos</td>
+<td align="left">Porcentaje</td>
 <td align="right">2019</td>
 </tr>
 <tr class="odd">
+<td align="left">DE_203</td>
 <td align="left">Proporción de viajes totales en transporte privado con
 una duración mayor o igual a 45 minutos</td>
+<td align="left">Porcentaje</td>
 <td align="right">2019</td>
 </tr>
 <tr class="even">
+<td align="left">DE_202</td>
 <td align="left">Proporción de viajes totales en transporte público con
 una duración mayor o igual a 45 minutos</td>
+<td align="left">Porcentaje</td>
 <td align="right">2019</td>
 </tr>
 <tr class="odd">
+<td align="left">BPU_4</td>
 <td align="left">Razón entre disponibilidad efectiva de matrículas y
 demanda potencial por educación básica</td>
+<td align="left">Relación (Matrículas / Población)</td>
 <td align="right">2020</td>
 </tr>
 <tr class="even">
+<td align="left">DE_33</td>
 <td align="left">Relación entre el tiempo de viaje en hora punta
 respecto del tiempo de viaje fuera de hora punta</td>
+<td align="left">Relación (Tiempo de viaje PPM / Tiempo de viaje
+PFP)</td>
 <td align="right">2019</td>
 </tr>
 <tr class="odd">
+<td align="left">IS_32</td>
 <td align="left">Requerimiento de viviendas nuevas urbanas</td>
+<td align="left">Número de viviendas</td>
 <td align="right">2018</td>
 </tr>
 <tr class="even">
+<td align="left">BPU_23</td>
 <td align="left">Superficie de parques públicos por habitante que cumple
 estándar de distancia (3.000 metros)</td>
+<td align="left">m²/hab</td>
 <td align="right">2018</td>
 </tr>
 <tr class="odd">
+<td align="left">BPU_21</td>
 <td align="left">Superficie de plazas públicas por habitante que cumple
 estándar de distancia (400 metros)</td>
+<td align="left">m²/hab</td>
 <td align="right">2018</td>
 </tr>
 <tr class="even">
+<td align="left">BPU_29</td>
 <td align="left">Superficie de áreas verdes públicas por habitante</td>
+<td align="left">m²/hab</td>
 <td align="right">2018</td>
 </tr>
 <tr class="odd">
+<td align="left">BPU_24</td>
 <td align="left">Tasa de conexiones residenciales fijas de internet por
 cada 1.000 viviendas particulares</td>
+<td align="left">Relación (Conexiones residenciales fijas / 1.000
+viviendas particulares)</td>
 <td align="right">2021</td>
 </tr>
 <tr class="even">
+<td align="left">BPU_201</td>
 <td align="left">Tasa de conexiones residenciales fijas de internet por
 cada 100 habitantes</td>
+<td align="left">Relación (Conexiones residenciales fijas / 100
+habs)</td>
 <td align="right">2021</td>
 </tr>
 <tr class="odd">
+<td align="left">IS_58b</td>
 <td align="left">Tasa de víctimas de delitos contra la propiedad por
 casos policiales cada 10.000 habitantes</td>
+<td align="left">Tasa</td>
 <td align="right">2022</td>
 </tr>
 <tr class="even">
+<td align="left">IS_58c</td>
 <td align="left">Tasa de víctimas de delitos violencia intrafamiliar por
 casos policiales cada 10.000 habitantes</td>
+<td align="left">Tasa</td>
 <td align="right">2022</td>
 </tr>
 <tr class="odd">
+<td align="left">IS_58a</td>
 <td align="left">Tasa de víctimas de delitos violentos por casos
 policiales cada 10.000 habitantes</td>
+<td align="left">Tasa</td>
 <td align="right">2022</td>
 </tr>
 <tr class="even">
+<td align="left">DE_16</td>
 <td align="left">Tiempo de viaje en hora punta mañana</td>
+<td align="left">Min</td>
 <td align="right">2018</td>
 </tr>
 <tr class="odd">
+<td align="left">DE_29</td>
 <td align="left">Tiempo de viaje en transporte público en hora punta
 mañana</td>
+<td align="left">Min</td>
 <td align="right">2018</td>
 </tr>
 <tr class="even">
+<td align="left">EA_34</td>
 <td align="left">Cantidad de residuos eliminados con disposición final
 per cápita</td>
+<td align="left">kg/hab/día</td>
 <td align="right">2022</td>
 </tr>
 <tr class="odd">
+<td align="left">EA_23</td>
 <td align="left">Porcentaje de aporte de energía eléctrica proveniente
 de paneles solares domiciliarios</td>
+<td align="left">Porcentaje</td>
 <td align="right">2018</td>
 </tr>
 <tr class="even">
+<td align="left">EA_36</td>
 <td align="left">Porcentaje de residuos municipales valorizados</td>
+<td align="left">Porcentaje</td>
 <td align="right">2022</td>
 </tr>
 <tr class="odd">
+<td align="left">EA_41</td>
 <td align="left">Porcentaje de equipamiento crítico expuesto a
 inundación por tsunami</td>
+<td align="left">Porcentaje</td>
 <td align="right">2019</td>
 </tr>
 <tr class="even">
+<td align="left">EA_48</td>
 <td align="left">Porcentaje de población expuesta a inundación por
 tsunami</td>
+<td align="left">Porcentaje</td>
 <td align="right">2018</td>
 </tr>
 <tr class="odd">
+<td align="left">IS_39</td>
 <td align="left">Porcentaje de unidades vecinales de la comuna que
 tienen entre 20% y 60% de hogares vulnerables</td>
+<td align="left">Porcentaje</td>
 <td align="right">2018</td>
 </tr>
 <tr class="even">
+<td align="left">IP_43</td>
 <td align="left">Porcentaje de zonas típicas con lineamientos de
 intervención aprobados</td>
+<td align="left">Porcentaje</td>
 <td align="right">2019</td>
 </tr>
 <tr class="odd">
+<td align="left">IP_43a</td>
 <td align="left">Porcentaje de zonas típicas con lineamientos de
 intervención en desarrollo</td>
+<td align="left">Porcentaje</td>
 <td align="right">2019</td>
 </tr>
 <tr class="even">
+<td align="left">IS_39a</td>
 <td align="left">Índice de segregación de la población vulnerable</td>
+<td align="left">Índice</td>
 <td align="right">2018</td>
 </tr>
 <tr class="odd">
+<td align="left">EA_33</td>
 <td align="left">Porcentaje de la superficie de campamentos respecto del
 área urbana</td>
+<td align="left">Porcentaje</td>
 <td align="right">2021</td>
 </tr>
 <tr class="even">
+<td align="left">BPU_26*</td>
 <td align="left">Densidad de oferta real de transporte público mayor en
 periodo punta mañana, por persona</td>
+<td align="left">Promedio per cápita de frecuencia de TP mayor</td>
 <td align="right">2018</td>
 </tr>
 <tr class="odd">
+<td align="left">EA_35</td>
 <td align="left">Número de microbasurales por cada 10.000
 habitantes</td>
+<td align="left">Relación (Número microbasurales / 10.000 habs)</td>
 <td align="right">2018</td>
 </tr>
 <tr class="even">
+<td align="left">EA_10</td>
 <td align="left">Porcentaje de personas potencialmente expuestas a
 niveles de ruido diurno inaceptables (Ld &gt; 65 dBA OCDE)</td>
+<td align="left">Porcentaje</td>
 <td align="right">2019</td>
 </tr>
 <tr class="odd">
+<td align="left">EA_90</td>
 <td align="left">Porcentaje de personas potencialmente expuestas a
 niveles de ruido nocturno inaceptables (Ln &gt; 55 dBA OCDE)</td>
+<td align="left">Porcentaje</td>
 <td align="right">2019</td>
 </tr>
 <tr class="even">
+<td align="left">EA_33a</td>
 <td align="left">Densidad de hogares en campamentos</td>
+<td align="left">Densidad (Número hogares/ha)</td>
 <td align="right">2021</td>
 </tr>
 <tr class="odd">
+<td align="left">IG_91</td>
 <td align="left">Monto total per cápita, en pesos, de fondos entregados
 por el municipio a la comunidad vía proyectos concursables para el
 mejoramiento urbano</td>
+<td align="left">Relación (Monto per cápita en pesos / hab)</td>
 <td align="right">2018</td>
 </tr>
 <tr class="even">
+<td align="left">EA_34</td>
 <td align="left">Cantidad de residuos eliminados con disposición final
 per cápita</td>
+<td align="left">kg/hab/día</td>
 <td align="right">2018</td>
 </tr>
 <tr class="odd">
+<td align="left">IP_43</td>
 <td align="left">Porcentaje de zonas típicas con lineamientos de
 intervención aprobados</td>
+<td align="left">Porcentaje</td>
 <td align="right">2018</td>
 </tr>
 <tr class="even">
+<td align="left">IP_43a</td>
 <td align="left">Porcentaje de zonas típicas con lineamientos de
 intervención en desarrollo</td>
+<td align="left">Porcentaje</td>
 <td align="right">2018</td>
 </tr>
 <tr class="odd">
+<td align="left">EA_23</td>
 <td align="left">Porcentaje de aporte de energía eléctrica proveniente
 de paneles solares domiciliarios</td>
-<td align="right">2019</td>
+<td align="left">Porcentaje</td>
+<td align="right"></td>
 </tr>
 </tbody>
 </table>
