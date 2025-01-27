@@ -6,7 +6,8 @@ Los datos de este sistema se entregan desde el sitio web del INE en un archivo E
 
 Dado lo anterior, este repositorio carga el archivo de datos original del SIEDU (la matriz de indicadores), lo limpia, y lo entrega como una sola tabla en formato tidy (una observación por fila; es decir, cada fila representa solo a una variable de una sola comuna). 
 
-**Producto:** base de datos comunales de 83 indicadores de desarrollo urbano para 117 comunas de Chile. Disponible en la carpeta `datos_procesados`.
+### Datos
+Base de datos comunales de 83 indicadores de desarrollo urbano para 117 comunas de Chile. Disponible en la carpeta `datos`.
 
 La base de datos original se puede descargar desde el [sitio del INE](https://www.ine.gob.cl/herramientas/portal-de-mapas/siedu), en [este enlace.](https://www.ine.gob.cl/docs/default-source/sistema-de-indicadores-y-estandares-de-desarrollo-urbano/indicadores/actualización-2019/matriz-siedu-publicacion.xlsm?sfvrsn=f50c5851_13)
 
