@@ -73,11 +73,13 @@ siedu_limpiar <- function(data, año = 1990) {
     mutate(variable = str_remove(variable, "\\.$"),
            variable = str_trim(variable))
   
+  # browser()
   # ordenar
   siedu_9 <- siedu_8 |> 
     arrange(variable, comuna) |> 
     mutate(año = año) |> 
-    relocate(año, .before = variable)
+    relocate(año, .before = variable) |> 
+    rename(valor = cifra)
   
   return(siedu_9)
 }

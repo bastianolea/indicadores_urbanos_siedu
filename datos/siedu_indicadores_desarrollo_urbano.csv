@@ -1,4 +1,4 @@
-comuna;cut_comuna;id;año;variable;cifra;medida;estandar
+comuna;cut_comuna;id;año;variable;valor;medida;estandar
 ALTO HOSPICIO;1107;BPU_8;2018;Cantidad de jornadas diarias completas de trabajo de médicos, en salud primaria, por cada 10.000 habitantes;3,27500000000000e+01;Jornadas diarias / 10.000 habs;Sin estándar
 ALTO HOSPICIO;1107;BPU_17;2019;Cantidad de luminarias cada 50 metros lineales de red vial;5,80000000000000e-01;Relación (Número de luminarias / 50 m de red vial);Sin estándar
 ALTO HOSPICIO;1107;EA_34;2019;Cantidad de residuos eliminados con disposición final per cápita;1,22061801069188e+00;kg/hab/día;Hasta 1 kilogramo / habitante / día
