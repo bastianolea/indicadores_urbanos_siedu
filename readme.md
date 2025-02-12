@@ -9,6 +9,8 @@ Dado lo anterior, este repositorio carga el archivo de datos original del SIEDU 
 ### Datos
 Base de datos comunales de 83 indicadores de desarrollo urbano para 117 comunas de Chile. Disponible en la carpeta `datos`.
 
+Accede a los datos [en este enlace](https://github.com/bastianolea/siedu_indicadores_urbanos/raw/main/datos/siedu_indicadores_desarrollo_urbano.csv).
+
 La base de datos original se puede descargar desde el [sitio del INE](https://www.ine.gob.cl/herramientas/portal-de-mapas/siedu), en [este enlace.](https://www.ine.gob.cl/docs/default-source/sistema-de-indicadores-y-estandares-de-desarrollo-urbano/indicadores/actualización-2019/matriz-siedu-publicacion.xlsm?sfvrsn=f50c5851_13)
 
 ### Tabla de variables disponibles:
